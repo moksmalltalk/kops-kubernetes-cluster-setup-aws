@@ -48,7 +48,7 @@
 1. sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 2. sudo chmod +x ./kubectl
 3. sudo mv ./kubectl /usr/local/bin/kubectl
-4. aws s3 mb s3://nubonglegah.k8.local
+4*. aws s3 mb s3://nubonglegah.k8.local
 5. aws s3 ls
 
 # 5) Create an IAM role from AWS Console or CLI with below Policies.
