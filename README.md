@@ -40,6 +40,7 @@
  	#Install wget if not installed
  	sudo apt install wget -y
  	sudo wget https://github.com/kubernetes/kops/releases/download/v1.22.0/kops-linux-amd64
+	sudo wget https://github.com/kubernetes/kops/blob/master/permalinks/upgrade_kops.md#1.23.0 (updated)
  	sudo chmod +x kops-linux-amd64
  	sudo mv kops-linux-amd64 /usr/local/bin/kops
  
@@ -59,8 +60,8 @@ IAMFullAccess
 AmazonVPCFullAccess
 
 
-Then Attach IAM role to ubuntu server from Console Select KOPS Server --> Actions --> Instance Settings --> Attach/Replace IAM Role --> Select the role which
-You Created. --> Save.
+Then Attach IAM role to ubuntu server from Console Select KOPS Server --> Actions --> Security --> Modify IAM Role --> Select the role which
+You Created. --> Update IAM Role.
 
 
 
@@ -69,7 +70,7 @@ You Created. --> Save.
 aws s3 mb s3://class21.k8s.local
 aws s3 ls
 	
-ex: s3://nubong.k8s.local
+ex: s3://moksk8s.local
      
 Expose environment variable:
 
@@ -77,6 +78,7 @@ Expose environment variable:
 vi .bashrc
 	
 # Give Unique Name And S3 Bucket which you created.
+
 export NAME=class21.k8s.local
 export KOPS_STATE_STORE=s3://class21.k8s.local
  
